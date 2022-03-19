@@ -1,4 +1,5 @@
 
+
 HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
 $ git branch conflict
 

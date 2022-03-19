@@ -1,0 +1,115 @@
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ vi s1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ vi s2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git add s1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git add s2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git commit -m "s1,s2"
+[main 64687fc] s1,s2
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Submodule/s1.txt
+ create mode 100644 Submodule/s2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git remote -v
+hi      https://github.com/khajahussainsyed2k/version_control.git (fetch)
+hi      https://github.com/khajahussainsyed2k/version_control.git (push)
+origin  https://github.com/khajahussainsyed2k/zemoso-training.git (fetch)
+origin  https://github.com/khajahussainsyed2k/zemoso-training.git (push)
+origin1 https://github.com/syedqadeer96/Assignment-1.git (fetch)
+origin1 https://github.com/syedqadeer96/Assignment-1.git (push)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git remote add origin2 https://github.com/syedqadeer96/sub.git
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git remote -v
+hi      https://github.com/khajahussainsyed2k/version_control.git (fetch)
+hi      https://github.com/khajahussainsyed2k/version_control.git (push)
+origin  https://github.com/khajahussainsyed2k/zemoso-training.git (fetch)
+origin  https://github.com/khajahussainsyed2k/zemoso-training.git (push)
+origin1 https://github.com/syedqadeer96/Assignment-1.git (fetch)
+origin1 https://github.com/syedqadeer96/Assignment-1.git (push)
+origin2 https://github.com/syedqadeer96/sub.git (fetch)
+origin2 https://github.com/syedqadeer96/sub.git (push)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git push origin2 master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/syedqadeer96/sub.git'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git push origin2 main
+Enumerating objects: 52, done.
+Counting objects: 100% (52/52), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (43/43), done.
+Writing objects: 100% (52/52), 19.57 KiB | 1.78 MiB/s, done.
+Total 52 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/syedqadeer96/sub.git
+ * [new branch]      main -> main
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (main)
+$ git init
+Initialized empty Git repository in C:/Users/HP/OneDrive/Desktop/Submodule/.git/
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (master)
+$ mkdir git-submodule-demo
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule (master)
+$ cd git-submodule-demo
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule/git-submodule-demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/HP/OneDrive/Desktop/Submodule/git-submodule-demo/.git/
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule/git-submodule-demo (master)
+$ git submodule addhttps://github.com/syedqadeer96/sub.git
+usage: git submodule [--quiet] [--cached]
+   or: git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [--reference <repository>] [--] <repository> [<path>]
+   or: git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
+   or: git submodule [--quiet] init [--] [<path>...]
+   or: git submodule [--quiet] deinit [-f|--force] (--all| [--] <path>...)
+   or: git submodule [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]
+   or: git submodule [--quiet] set-branch (--default|--branch <branch>) [--] <path>
+   or: git submodule [--quiet] set-url [--] <path> <newurl>
+   or: git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
+   or: git submodule [--quiet] foreach [--recursive] <command>
+   or: git submodule [--quiet] sync [--recursive] [--] [<path>...]
+   or: git submodule [--quiet] absorbgitdirs [--] [<path>...]
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule/git-submodule-demo (master)
+$ git submodule add https://github.com/syedqadeer96/sub.git
+Cloning into 'C:/Users/HP/OneDrive/Desktop/Submodule/git-submodule-demo/sub'...
+remote: Enumerating objects: 52, done.
+remote: Counting objects: 100% (52/52), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 52 (delta 13), reused 52 (delta 13), pack-reused 0
+Receiving objects: 100% (52/52), 19.57 KiB | 1.96 MiB/s, done.
+Resolving deltas: 100% (13/13), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule/git-submodule-demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitmodules
+        new file:   sub
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Submodule/git-submodule-demo (master)
+$
